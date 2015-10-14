@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="lingoApp">
+	<head>
+		<title>Lingorama - Translate</title>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	</head>
+	<body ng-controller="lingoController">
+		<h1>Lingorama - Translate</h1>
+		<p>{{greeting}}</p>
+		<ul>
+			<li><a href="/progress">Progress</a></li>
+			<li><a href="/quiz">Quiz</a></li>
+			<li><a href="/translate">Translate</a></li>
+		</ul>
+		<form ng-submit="translate()">
+			<input placeholder="Translate from language..." type="text" ng-model="translation.oldLanguage">
+			<input placeholder="Translate into language..." type="text" ng-model="translation.newLanguage">
+			<input placeholder="Word to translate..." type="text" ng-model="translation.word">
+			<input type="submit">
+		</form>
+		<p>{{translatedWord}}</p>
+		<script src="../js/main.js"></script>
+	</body>
+</html>
